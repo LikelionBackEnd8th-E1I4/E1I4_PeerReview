@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: jdbc:sqlite:db.sqlite
+    driver-class-name: org.sqlite.JDBC
+    username: sa
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.community.dialect.SQLiteDialect
+    show-sql: true
+
+  mvc:
+    static-path-pattern: /static/**
+  web:
+    resources:
+      static-locations: file:media/, classpath:/static
+
+jwt:
+  # 영문 기준 32글자 이상되어야 함
+  secret: IamBackendDeveloperIcanDoJavaAndJavascrpitAndIwanaGradutatedTechit
